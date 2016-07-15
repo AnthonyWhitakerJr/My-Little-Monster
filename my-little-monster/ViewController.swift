@@ -11,9 +11,9 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var skulls: [UIImageView]!
-    @IBOutlet weak var heartImage: UIDraggableImageView!
-    @IBOutlet weak var foodImage: UIDraggableImageView!
-    @IBOutlet weak var monsterImage: UIMonsterImageView!
+    @IBOutlet weak var heartImage: UIImageViewDraggable!
+    @IBOutlet weak var foodImage: UIImageViewDraggable!
+    @IBOutlet weak var monsterImage: UIImageViewMonster!
     
     
     override func viewDidLoad() {

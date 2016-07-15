@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class UIDraggableImageView : UIImageView {
+class UIImageViewDraggable : UIImageView {
     
     var originalPosition: CGPoint!
     

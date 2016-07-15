@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class UIMonsterImageView: UIImageView {
+class UIImageViewMonster: UIImageView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

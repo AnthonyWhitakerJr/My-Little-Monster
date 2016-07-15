@@ -67,7 +67,7 @@
                                     <rect key="frame" x="213" y="30" width="175" height="50"/>
                                 </variation>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="Vjb-AQ-4JS" customClass="UIMonsterImageView" customModule="my_little_monster" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="Vjb-AQ-4JS" customClass="UIImageViewMonster" customModule="my_little_monster" customModuleProvider="target">
                                 <rect key="frame" x="44" y="199" width="512" height="341"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="Dem-bn-w9b"/>
@@ -85,13 +85,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="85" translatesAutoresizingMaskIntoConstraints="NO" id="Uvn-kz-MNP" userLabel="Care - Stack View">
                                 <rect key="frame" x="180" y="104" width="241" height="80"/>
                                 <subviews>
-                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="CbK-ko-Mji" customClass="UIDraggableImageView" customModule="my_little_monster" customModuleProvider="target">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="CbK-ko-Mji" customClass="UIImageViewDraggable" customModule="my_little_monster" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1" width="78" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="CbK-ko-Mji" secondAttribute="height" multiplier="95:98" id="3bl-go-wUh"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="gxH-P2-K28" customClass="UIDraggableImageView" customModule="my_little_monster" customModuleProvider="target">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="gxH-P2-K28" customClass="UIImageViewDraggable" customModule="my_little_monster" customModuleProvider="target">
                                         <rect key="frame" x="163" y="1" width="78" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="gxH-P2-K28" secondAttribute="height" multiplier="95:98" id="8Ed-YZ-pWy"/>
