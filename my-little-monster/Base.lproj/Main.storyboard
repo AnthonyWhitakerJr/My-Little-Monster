@@ -82,7 +82,7 @@
                                             <constraint firstAttribute="width" secondItem="CbK-ko-Mji" secondAttribute="height" multiplier="95:98" id="3bl-go-wUh"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="gxH-P2-K28" customClass="UIImageViewDraggable" customModule="my_little_monster" customModuleProvider="target">
+                                    <imageView tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="gxH-P2-K28" customClass="UIImageViewDraggable" customModule="my_little_monster" customModuleProvider="target">
                                         <rect key="frame" x="163" y="1" width="78" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="gxH-P2-K28" secondAttribute="height" multiplier="95:98" id="8Ed-YZ-pWy"/>

@@ -27,6 +27,12 @@ class ViewController: UIViewController {
     var timer: NSTimer!
     var monsterHappy = true
     
+    var musicPlayer: AVAudioPlayer!
+    var sfxBite: AVAudioPlayer!
+    var sfxHeart: AVAudioPlayer!
+    var sfxDeath: AVAudioPlayer!
+    var sfxSkull: AVAudioPlayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,12 +48,40 @@ class ViewController: UIViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.itemDroppedOnCharacter(_:)), name: "onTargetDropped", object: nil)
         
+        do {
+            try musicPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("cave-music", ofType: "mp3")!))
+            try sfxBite = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bite", ofType: "wav")!))
+            try sfxHeart = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("heart", ofType: "wav")!))
+            try sfxDeath = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("death", ofType: "wav")!))
+            try sfxSkull = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("skull", ofType: "wav")!))
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+        
+        musicPlayer.prepareToPlay()
+        musicPlayer.play()
+        sfxBite.prepareToPlay()
+        sfxHeart.prepareToPlay()
+        sfxDeath.prepareToPlay()
+        sfxSkull.prepareToPlay()
+        
         startTimer()
     }
     
-    func itemDroppedOnCharacter(notif: AnyObject) {
+    func itemDroppedOnCharacter(notif: NSNotification) {
         monsterHappy = true
         startTimer()
+        
+        if let image = notif.object as? UIImageViewDraggable {
+            switch image.tag {
+            case 0:
+                sfxHeart.play()
+            case 1:
+                sfxBite.play()
+            default:
+                break
+            }
+        }
         
         toggleCareItemAvailability(foodImage, availble: false)
         toggleCareItemAvailability(heartImage, availble: false)
@@ -72,6 +106,8 @@ class ViewController: UIViewController {
             for i in 0...penalties - 1 {
                 skulls[i].alpha = OPAQUE
             }
+            
+            sfxSkull.play()
             
             if penalties >= maxPenalties {
                 gameOver()
@@ -108,6 +144,7 @@ class ViewController: UIViewController {
     func gameOver() {
         timer.invalidate()
         monsterImage.playDeathAnimation()
+        sfxDeath.play()
     }
     
 }
