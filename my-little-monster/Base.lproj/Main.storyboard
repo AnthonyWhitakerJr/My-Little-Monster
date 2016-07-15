@@ -82,7 +82,7 @@
                                     <rect key="frame" x="124" y="105" width="354" height="236"/>
                                 </variation>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="85" translatesAutoresizingMaskIntoConstraints="NO" id="Uvn-kz-MNP" userLabel="Care - Stack View">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="85" translatesAutoresizingMaskIntoConstraints="NO" id="Uvn-kz-MNP" userLabel="Care - Stack View">
                                 <rect key="frame" x="180" y="104" width="241" height="80"/>
                                 <subviews>
                                     <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="CbK-ko-Mji" customClass="UIDraggableImageView" customModule="my_little_monster" customModuleProvider="target">
@@ -141,7 +141,6 @@
                             <constraint firstItem="Vjb-AQ-4JS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pug-CS-nfF"/>
                             <constraint firstAttribute="trailing" secondItem="8oX-Fi-MHd" secondAttribute="trailing" id="vgA-jN-bEx"/>
                             <constraint firstItem="Vjb-AQ-4JS" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xfR-DJ-tKg"/>
-                            <constraint firstItem="WVs-8i-XVM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ynq-Y2-jq8"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -151,7 +150,6 @@
                                 <exclude reference="Owt-Vm-fZj"/>
                                 <exclude reference="a9I-5j-Vjh"/>
                                 <exclude reference="pug-CS-nfF"/>
-                                <exclude reference="ynq-Y2-jq8"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
