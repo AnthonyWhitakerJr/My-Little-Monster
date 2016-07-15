@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var skulls: [UIImageView]!
     @IBOutlet weak var heartImage: UIImageViewDraggable!
     @IBOutlet weak var foodImage: UIImageViewDraggable!
@@ -24,12 +25,16 @@ class ViewController: UIViewController {
     
     var penalties = 0
     var timer: NSTimer!
+    var monsterHappy = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         heartImage.dropTarget = monsterImage
         foodImage.dropTarget = monsterImage
+        
+        toggleCareItemAvailability(foodImage, availble: false)
+        toggleCareItemAvailability(heartImage, availble: false)
         
         for skull in skulls {
             skull.alpha = DIM_ALPHA
@@ -41,7 +46,11 @@ class ViewController: UIViewController {
     }
     
     func itemDroppedOnCharacter(notif: AnyObject) {
-        print("ITEM DROPPED")
+        monsterHappy = true
+        startTimer()
+        
+        toggleCareItemAvailability(foodImage, availble: false)
+        toggleCareItemAvailability(heartImage, availble: false)
     }
     
     func startTimer() {
@@ -53,18 +62,46 @@ class ViewController: UIViewController {
     }
     
     func changeGameState() {
-        for skull in skulls {
-            skull.alpha = DIM_ALPHA
+        if !monsterHappy {
+            for skull in skulls {
+                skull.alpha = DIM_ALPHA
+            }
+            
+            penalties += 1
+            
+            for i in 0...penalties - 1 {
+                skulls[i].alpha = OPAQUE
+            }
+            
+            if penalties >= maxPenalties {
+                gameOver()
+            }
         }
         
-        penalties += 1
+        let rand = arc4random_uniform(2)
         
-        for i in 0...penalties - 1 {
-            skulls[i].alpha = OPAQUE
+        switch rand {
+        case 0:
+            toggleCareItemAvailability(foodImage, availble: false)
+            toggleCareItemAvailability(heartImage, availble: true)
+        case 1:
+            toggleCareItemAvailability(foodImage, availble: true)
+            toggleCareItemAvailability(heartImage, availble: false)
+        default:
+            break
         }
         
-        if penalties >= maxPenalties {
-            gameOver()
+        //TODO: Current item code?
+        monsterHappy = false
+    }
+    
+    func toggleCareItemAvailability(careItem: UIImageViewDraggable, availble: Bool) {
+        if availble {
+            careItem.alpha = OPAQUE
+            careItem.userInteractionEnabled = true
+        } else {
+            careItem.alpha = DIM_ALPHA
+            careItem.userInteractionEnabled = false
         }
     }
     
@@ -72,6 +109,6 @@ class ViewController: UIViewController {
         timer.invalidate()
         monsterImage.playDeathAnimation()
     }
-
+    
 }
 
