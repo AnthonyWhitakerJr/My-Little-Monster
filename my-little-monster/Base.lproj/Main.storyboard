@@ -173,9 +173,9 @@
                         <outlet property="foodImage" destination="gxH-P2-K28" id="Ecd-Dd-aZh"/>
                         <outlet property="heartImage" destination="CbK-ko-Mji" id="gmm-SX-Jc9"/>
                         <outlet property="monsterImage" destination="Vjb-AQ-4JS" id="zOp-DW-MWQ"/>
-                        <outletCollection property="skulls" destination="1uz-sP-3KK" collectionClass="NSMutableArray" id="6Gy-7g-iOP"/>
-                        <outletCollection property="skulls" destination="qP6-cs-tpv" collectionClass="NSMutableArray" id="31x-A3-LFw"/>
-                        <outletCollection property="skulls" destination="zVF-Py-kL8" collectionClass="NSMutableArray" id="qsE-sA-BdH"/>
+                        <outletCollection property="skulls" destination="qP6-cs-tpv" collectionClass="NSMutableArray" id="SSN-wS-DW8"/>
+                        <outletCollection property="skulls" destination="1uz-sP-3KK" collectionClass="NSMutableArray" id="mD2-xK-Hhu"/>
+                        <outletCollection property="skulls" destination="zVF-Py-kL8" collectionClass="NSMutableArray" id="HVq-8c-0IX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
