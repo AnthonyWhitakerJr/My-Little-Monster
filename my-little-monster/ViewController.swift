@@ -11,8 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var skulls: [UIImageView]!
-    @IBOutlet weak var heartImage: UIImageView!
-    @IBOutlet weak var foodImage: UIImageView!
+    @IBOutlet weak var heartImage: UIDraggableImageView!
+    @IBOutlet weak var foodImage: UIDraggableImageView!
     @IBOutlet weak var monsterImage: UIImageView!
     
     
@@ -28,12 +28,6 @@ class ViewController: UIViewController {
         monsterImage.animationRepeatCount = 0
         monsterImage.startAnimating()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
