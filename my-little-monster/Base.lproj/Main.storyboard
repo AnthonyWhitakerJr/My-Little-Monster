@@ -67,7 +67,7 @@
                                     <rect key="frame" x="213" y="30" width="175" height="50"/>
                                 </variation>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="Vjb-AQ-4JS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="Vjb-AQ-4JS" customClass="UIMonsterImageView" customModule="my_little_monster" customModuleProvider="target">
                                 <rect key="frame" x="44" y="199" width="512" height="341"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="Dem-bn-w9b"/>

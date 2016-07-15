@@ -13,6 +13,7 @@
 		92E5DB7F1D39107900DB3E4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E5DB7E1D39107900DB3E4E /* Assets.xcassets */; };
 		92E5DB821D39107900DB3E4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E5DB801D39107900DB3E4E /* LaunchScreen.storyboard */; };
 		92E5DB8C1D39577600DB3E4E /* UIDraggableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E5DB8B1D39577600DB3E4E /* UIDraggableImageView.swift */; };
+		92E5DB8E1D3966F700DB3E4E /* UIMonsterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E5DB8D1D3966F700DB3E4E /* UIMonsterImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		92E5DB811D39107900DB3E4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92E5DB831D39107900DB3E4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92E5DB8B1D39577600DB3E4E /* UIDraggableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDraggableImageView.swift; sourceTree = "<group>"; };
+		92E5DB8D1D3966F700DB3E4E /* UIMonsterImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMonsterImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				92E5DB801D39107900DB3E4E /* LaunchScreen.storyboard */,
 				92E5DB831D39107900DB3E4E /* Info.plist */,
 				92E5DB8B1D39577600DB3E4E /* UIDraggableImageView.swift */,
+				92E5DB8D1D3966F700DB3E4E /* UIMonsterImageView.swift */,
 			);
 			path = "my-little-monster";
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 				92E5DB7A1D39107900DB3E4E /* ViewController.swift in Sources */,
 				92E5DB8C1D39577600DB3E4E /* UIDraggableImageView.swift in Sources */,
 				92E5DB781D39107900DB3E4E /* AppDelegate.swift in Sources */,
+				92E5DB8E1D3966F700DB3E4E /* UIMonsterImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
