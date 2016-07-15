@@ -10,9 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var skulls: [UIImageView]!
+    @IBOutlet weak var heartImage: UIImageView!
+    @IBOutlet weak var foodImage: UIImageView!
+    @IBOutlet weak var monsterImage: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        var images = [UIImage]()
+        for i in 1...4 {
+            images.append(UIImage(named: "idle\(i)")!)
+        }
+        monsterImage.animationImages = images
+        monsterImage.animationDuration = 0.8
+        monsterImage.animationRepeatCount = 0
+        monsterImage.startAnimating()
     }
 
     override func didReceiveMemoryWarning() {
